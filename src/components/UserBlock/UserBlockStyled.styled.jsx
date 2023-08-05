@@ -5,10 +5,11 @@ export const UserBlockStyled = styled.div`
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  font-size: 24px;
+
   gap: 30px;
   p {
     margin: 0px;
+    font-size: 24px;
   }
   button {
     border: 3px outset #3ae2ce;

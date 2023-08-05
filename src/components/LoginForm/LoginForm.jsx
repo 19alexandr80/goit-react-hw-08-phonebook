@@ -1,19 +1,17 @@
-// import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-
-import { register } from 'redux/auth/operations';
+import { logIn } from 'redux/auth/operations';
 
 import { FormStyled } from 'components/RegisterForm/FormStyled.styled';
 
-export const RegisterForm = () => {
+export const LoginForm = () => {
   const dispatch = useDispatch();
+
   const formSubmit = e => {
     e.preventDefault();
     const form = e.currentTarget;
 
     dispatch(
-      register({
-        name: form.elements.name.value,
+      logIn({
         email: form.elements.email.value,
         password: form.elements.password.value,
       })
@@ -24,10 +22,6 @@ export const RegisterForm = () => {
     <FormStyled>
       <form onSubmit={formSubmit}>
         <label>
-          Username
-          <input type="text" name="name" />
-        </label>
-        <label>
           Email
           <input type="email" name="email" />
         </label>
@@ -35,7 +29,7 @@ export const RegisterForm = () => {
           Password
           <input type="password" name="password" />
         </label>
-        <button type="submit">Register</button>
+        <button type="submit">Log In</button>
       </form>
     </FormStyled>
   );

@@ -1,37 +1,37 @@
-// import { Helmet } from 'react-helmet';
-// import { LoginForm } from 'components/LoginForm/LoginForm';
-import { useDispatch } from 'react-redux';
-import { logIn } from 'redux/auth/operations';
+import { LoginForm } from 'components/LoginForm/LoginForm';
 
-const LoginForm = () => {
-  const dispatch = useDispatch();
+// import { useDispatch } from 'react-redux';
+// import { logIn } from 'redux/auth/operations';
 
-  const formSubmit = e => {
-    e.preventDefault();
-    const form = e.currentTarget;
+// const LoginForm = () => {
+//   const dispatch = useDispatch();
 
-    dispatch(
-      logIn({
-        email: form.elements.email.value,
-        password: form.elements.password.value,
-      })
-    );
-    form.reset();
-  };
-  return (
-    <form onSubmit={formSubmit}>
-      <label>
-        Email
-        <input type="email" name="email" />
-      </label>
-      <label>
-        Password
-        <input type="password" name="password" />
-      </label>
-      <button type="submit">Log In</button>
-    </form>
-  );
-};
+//   const formSubmit = e => {
+//     e.preventDefault();
+//     const form = e.currentTarget;
+
+//     dispatch(
+//       logIn({
+//         email: form.elements.email.value,
+//         password: form.elements.password.value,
+//       })
+//     );
+//     form.reset();
+//   };
+//   return (
+//     <form onSubmit={formSubmit}>
+//       <label>
+//         Email
+//         <input type="email" name="email" />
+//       </label>
+//       <label>
+//         Password
+//         <input type="password" name="password" />
+//       </label>
+//       <button type="submit">Log In</button>
+//     </form>
+//   );
+// };
 
 export default function Login() {
   return (
