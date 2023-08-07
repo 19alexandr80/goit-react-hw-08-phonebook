@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 
 export const NavStyled = styled.nav`
   padding: 15px;
@@ -10,6 +10,16 @@ export const NavStyled = styled.nav`
   font-size: 24px;
 `;
 export const NavLinkStyled = styled(NavLink)`
+  text-decoration: none;
+  color: black;
+  :hover {
+    color: red;
+  }
+  :active {
+    color: green;
+  }
+`;
+export const LinkStyled = styled(Link)`
   text-decoration: none;
   color: black;
   :hover {

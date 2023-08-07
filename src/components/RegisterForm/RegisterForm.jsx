@@ -1,5 +1,5 @@
-// import { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
 import { register } from 'redux/auth/operations';
 
@@ -7,6 +7,7 @@ import { FormStyled } from 'components/RegisterForm/FormStyled.styled';
 
 export const RegisterForm = () => {
   const dispatch = useDispatch();
+  const nav = useNavigate();
   const formSubmit = e => {
     e.preventDefault();
     const form = e.currentTarget;
@@ -19,6 +20,7 @@ export const RegisterForm = () => {
       })
     );
     form.reset();
+    nav('/contacts');
   };
   return (
     <FormStyled>

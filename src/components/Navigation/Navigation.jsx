@@ -6,6 +6,7 @@ import { UserBlock } from 'components/UserBlock/UserBlock';
 import {
   NavStyled,
   NavLinkStyled,
+  LinkStyled,
 } from 'components/Navigation/NavStyled.styled';
 
 export const Navigation = () => {
@@ -15,6 +16,7 @@ export const Navigation = () => {
     <>
       <NavStyled>
         <NavLinkStyled to="/">Home</NavLinkStyled>
+        {isLoggedIn && <LinkStyled to="/contacts">Contacts</LinkStyled>}
         {!isLoggedIn ? <AuthBlock /> : <UserBlock />}
       </NavStyled>
       <hr></hr>
