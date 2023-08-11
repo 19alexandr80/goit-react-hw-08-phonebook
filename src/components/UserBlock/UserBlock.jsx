@@ -13,7 +13,7 @@ export const UserBlock = () => {
   };
   return (
     <UserBlockStyled>
-      <p>{name}</p>
+      <p>Welcome {name}</p>
       <button type="button" onClick={onClick}>
         Logout
       </button>
