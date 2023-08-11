@@ -8,9 +8,6 @@ import { refreshUser } from 'redux/auth/operations';
 
 import { ContactsLitsStyled } from 'contactList/ContactListStyled.styled';
 
-// import { PhoneBook } from 'api/api';
-// const api = new PhoneBook();
-
 export const ContactList = () => {
   const dispatch = useDispatch();
 

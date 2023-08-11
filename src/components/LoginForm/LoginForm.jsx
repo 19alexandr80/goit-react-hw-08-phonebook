@@ -2,11 +2,9 @@ import { useDispatch } from 'react-redux';
 import { logIn } from 'redux/auth/operations';
 
 import { FormStyled } from 'components/RegisterForm/FormStyled.styled';
-import { useNavigate } from 'react-router-dom';
 
 export const LoginForm = () => {
   const dispatch = useDispatch();
-  const nav = useNavigate();
 
   const formSubmit = e => {
     e.preventDefault();
@@ -19,7 +17,6 @@ export const LoginForm = () => {
       })
     );
     form.reset();
-    nav('/contacts');
   };
   return (
     <FormStyled>
