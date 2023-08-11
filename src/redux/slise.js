@@ -44,9 +44,13 @@ export const contactsSlise = createSlice({
       .addCase(logIn.pending, handlePending)
       .addCase(logIn.rejected, handleRejected)
       .addCase(logIn.fulfilled, (state, action) => {
-        state.token = action.payload.token;
-        state.user = action.payload.user;
-        state.isLoggedIn = true;
+        if (!action.payload.token) {
+          return alert('Check the correctness of the entered data');
+        } else {
+          state.token = action.payload.token;
+          state.user = action.payload.user;
+          state.isLoggedIn = true;
+        }
       })
       .addCase(logOut.pending, handlePending)
       .addCase(logOut.rejected, handleRejected)
